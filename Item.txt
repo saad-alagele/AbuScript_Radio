@@ -1,0 +1,14 @@
+-- ox_inventory (items.lua)
+
+['radio'] = {
+	label = 'راديو',
+	weight = 1000,
+	stack = false,
+	allowArmed = true,
+},
+
+
+-- ESX Default Inventory (SQL)
+
+INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES
+('radio', 'راديو', 1000, 0, 1);

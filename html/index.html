@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>AbuScript-Radio V-1</title>
+</head>
+<body>
+    <div id="radio-shell" class="hidden">
+    <div id="Radio-container">
+
+        <img src="./public/RadioModel.png" alt="Radio Model" class="radio-model">
+    
+        <div class="panel">
+            <div class="panel-header">
+                <div class="battery icon">
+                    <i class="fa-solid fa-battery-three-quarters"></i>
+                    <span class="battery-level">72%</span>
+                </div>
+                
+                <div class="voice_Value icon">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <span class="voice-level">50%</span>
+                </div>
+
+                <div class="signal icon">
+                    <i class="fa-solid fa-signal"></i>
+                </div>
+            </div>
+    
+            <div class="panel-body">
+                <div class="panel-body-item">
+                    <div class="frequency-field">
+                        <input id="input-frequency" type="number" placeholder="0" value="0">
+                        <span class="frequency-unit">MHz</span>
+                    </div>
+                </div>
+
+                <div class="voice-container">
+                    <div class="voice_max">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
+                    <div class="voice_mute">
+                        <i class="fa-solid fa-microphone-slash"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons-container">
+            <button id="connect-button" class="channel-button" type="button" aria-label="Connect">
+                <span class="green-line"></span>
+            </button>
+            <button id="disconnect-button" class="channel-button" type="button" aria-label="Disconnect">
+                <span class="red-line"></span>
+            </button>
+            <button id="valueUp-button" class="channel-button" type="button" aria-label="Increase volume">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button id="valueDown-button" class="channel-button" type="button" aria-label="Decrease volume">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+        </div>
+
+    </div>
+    </div>
+    <div id="memberList-container" class="memberList-container hidden">
+        <div class="memberList-body">
+            <div class="memberList-info">
+                <div class="leftSide">
+                    <span class="frequencyLabel"></span>
+                    <span class="frequencyNumber">
+                        <span class="frequencyPrefix">الموجة:</span>
+                        <span class="frequencyValue">0</span>
+                        <span class="frequencyUnit">MHz</span>
+                    </span>
+                </div>
+                <div class="rightSide">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="memberCount">0</span>
+                </div>
+            </div>
+            <div class="memberList-item-container"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
