@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AbuScript Radio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════ Radio Panel ═══════════════════════ -->
+<div id="radio-container" class="hidden">
+
+  <!-- Header -->
+  <div class="radio-header">
+    <div class="radio-brand">
+      <span class="radio-icon">📻</span>
+      <span class="radio-title">AbuScript Radio</span>
+    </div>
+    <button id="btn-close" class="btn-icon" title="Close">✕</button>
+  </div>
+
+  <!-- Channel Row -->
+  <div class="radio-section">
+    <label class="section-label" for="channel-input">Channel</label>
+    <div class="channel-row">
+      <button class="btn-channel-step" id="btn-ch-down">‹</button>
+      <input
+        id="channel-input"
+        type="number"
+        min="1"
+        max="100"
+        value="1"
+        autocomplete="off"
+      />
+      <button class="btn-channel-step" id="btn-ch-up">›</button>
+    </div>
+    <div class="channel-actions">
+      <button class="btn-primary" id="btn-join">Join Channel</button>
+      <button class="btn-danger"  id="btn-leave">Leave</button>
+    </div>
+    <div id="current-channel-badge" class="channel-badge hidden">
+      Channel: <span id="current-channel-num">–</span>
+    </div>
+  </div>
+
+  <!-- Push-to-Talk -->
+  <div class="radio-section ptt-section">
+    <button class="btn-ptt" id="btn-ptt">
+      <span class="ptt-icon">🎙</span>
+      <span class="ptt-label">Push to Talk</span>
+    </button>
+    <span class="ptt-hint">Hold to transmit</span>
+  </div>
+
+  <!-- Radio Prop Toggle -->
+  <div class="radio-section prop-section">
+    <label class="toggle-label">
+      <input type="checkbox" id="chk-prop" />
+      <span class="toggle-track"></span>
+      <span class="toggle-text">Hold Radio (prop)</span>
+    </label>
+  </div>
+
+  <!-- Caller List -->
+  <div class="radio-section callers-section">
+    <div class="section-label">Callers on Channel</div>
+    <ul id="caller-list">
+      <li class="no-callers">No one on this channel</li>
+    </ul>
+  </div>
+
+  <!-- Notification bar -->
+  <div id="notification" class="notification hidden"></div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
